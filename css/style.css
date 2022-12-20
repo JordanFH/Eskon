@@ -262,7 +262,7 @@ header {
 }
 
 .logo a {
-     color: #000;
+     color: #fff;
      font-size: 25px;
      font-weight: bold;
 }
@@ -326,8 +326,8 @@ ul.email li a {
 }
 
 ul.email li i {
-     color: #000;
-     font-size: 19px;
+     color: #fff;
+     font-size: 23px;
 }
 
 .sidepanel {
