@@ -1,0 +1,38 @@
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+  #intro {
+    margin-top: -58.59px;
+  }
+}
+
+.navbar {
+  z-index: 2000;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+}
+
+.navbar .container-fluid a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#intro video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.mask {
+  background-color: rgba(251, 251, 251, 0.15);
+}
+
+#intro .mask,
+footer > div.text-center.p-3 {
+  background: linear-gradient(
+    45deg,
+    rgba(29, 236, 197, 0.7),
+    rgba(91, 14, 214, 0.7) 100%
+  );
+}

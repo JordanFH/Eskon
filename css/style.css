@@ -1,86 +1,168 @@
+/* ======= */
+/* For All */
+/* ======= */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Poppins, sans-serif;
 }
 
-/* Nav Start */
-
-nav {
-  background-color: rgb(235, 74, 74);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  z-index: 99;
+html {
+  overflow-y: scroll;
+  overflow-y: overlay;
 }
 
-nav .logo {
-  display: flex;
-  padding: 10px;
-  margin: 0 10px 0 10px;
-  font-weight: bold;
-  align-items: center;
-  font-size: 30px;
+body {
+  font-size: 18px;
 }
 
-nav img {
+/* ======= */
+/* Nav Bar */
+/* ======= */
+
+.navbar {
+  z-index: 2000;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+}
+
+#nav-options a {
+  margin: 0 5px;
+  transition: 0.5s ease;
+  border-bottom: 2px solid transparent;
+}
+
+#nav-options a:hover {
+  border-bottom: 2px solid;
+}
+
+.navbar ul {
+  padding: 0 20px;
+}
+
+.navbar .container-fluid ul a {
+  margin: 0 5px;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    align-items: baseline;
+  }
+
+  #nav-options {
+    margin-top: 20px;
+  }
+}
+
+.navbar .container-fluid a img {
   width: 30px;
-  height: auto;
+  height: 30px;
   margin-right: 10px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  font-size: 20px;
+.nav-active {
+  background: linear-gradient(45deg, #14aa97, #4012ac);
+  transition: 0.5s ease;
 }
 
-nav ul li {
-  margin: 10px;
-  border-radius: 5px;
-  font-weight: lighter;
+.fixed-top {
+  top: -40px;
+  transform: translateY(40px);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* =============== */
+/* Intro Container */
+/* =============== */
+
+#intro video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#intro .mask {
+  background: linear-gradient(
+    45deg,
+    rgba(29, 236, 197, 0.7),
+    rgba(91, 14, 214, 0.7) 100%
+  );
+}
+
+/* Height for devices larger than 576px */
+
+#intro {
+  margin-top: -64px;
+}
+
+#intro .btn {
   transition: 0.5s ease-in-out;
 }
 
-nav ul li:hover {
+#intro .btn span {
+  font-weight: bolder;
+  font-size: large;
+}
+
+#intro .btn:hover {
   background-color: #fff;
 }
 
-nav a {
-  text-decoration: none;
-  color: #fff;
+#intro .btn:hover span {
+  background: linear-gradient(45deg, #14aa97, #4012ac);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-nav ul li a{
-  display: block;
-  padding: 10px;
+/* ==== */
+/* Mask */
+/* ==== */
+
+.mask {
+  background-color: rgba(251, 251, 251, 0.15);
 }
 
-nav ul li:hover a {
-  color: rgb(235, 74, 74);
-  font-weight: bold;
+/* ====== */
+/* Footer */
+/* ====== */
+
+footer > div.text-center.p-3 {
+  background: linear-gradient(45deg, #14aa97, #4012ac);
 }
 
-a::before {
-  display: block;
-  content: attr(aria-label);
-  font-weight: bold;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
+/* ========== */
+/* Scroll Bar */
+/* ========== */
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
 }
 
-
-/* Example Start */
-
-.example{
-  margin: 70px 50px 0 50px;
+body::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.example p{
-  margin-bottom: 25px;
-  text-align: justify;
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #14aa97, #4012ac);
+  transition-duration: 0.5s;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(29, 236, 197, 0.95),
+    rgba(91, 14, 214, 0.95) 100%
+  );
+}
+
+/* ========= */
+/* Copyright */
+/* ========= */
+
+#copyright {
+  font-size: 15px;
 }
