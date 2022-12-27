@@ -74,6 +74,11 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
+.navbar .container-fluid button{
+  padding: 0;
+  margin-right: 15px;
+}
+
 /* =============== */
 /* Intro Container */
 /* =============== */
@@ -149,6 +154,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, #14aa97, #4012ac);
   transition-duration: 0.5s;
+  border-radius: 5px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
