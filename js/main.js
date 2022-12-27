@@ -21,8 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navbar.classList.add("fixed-top");
       navbar.classList.add("nav-active");
       // add padding top to show content behind navbar
-      navbar_height = navbar.offsetHeight;
-      document.body.style.paddingTop = navbar_height + "px";
+      document.body.style.paddingTop = navbar.offsetHeight + "px";
     } else {
       navbar.classList.remove("fixed-top");
       navbar.classList.remove("nav-active");
@@ -41,16 +40,26 @@ $(document).ready(function () {
 $("#navbarExample01").on("show.bs.collapse", function () {
   navbar.classList.add("fixed-top");
   navbar.classList.add("nav-active");
-  document.body.style.paddingTop = 59 + "px";
+  document.body.style.paddingTop = navbar.offsetHeight + "px";
 });
 
 $("#navbarExample01").on("hidden.bs.collapse", function () {
-  navbar.classList.remove("fixed-top");
   navbar.classList.remove("nav-active");
-  document.body.style.paddingTop = "0";
+  if (window.scrollY > window.innerHeight) {
+    navbar.classList.add("nav-active");
+  }
 });
 
 window.onresize = () => {
+  $("#navbarExample01").collapse("hide");
+  $(".fas").removeClass("fa-times");
+  $(".fas").addClass("fa-bars");
+
+  if (window.scrollY < window.innerHeight) {
+    navbar.classList.remove("nav-active");
+  } else {
+    navbar.classList.add("nav-active");
+  }
   intro.style.marginTop = "-" + navbar.offsetHeight + "px";
 };
 
