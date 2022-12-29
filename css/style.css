@@ -2,6 +2,10 @@
 /* For All */
 /* ======= */
 
+:root {
+  --gradiente: linear-gradient(45deg, #14aa97, #4012ac);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +18,7 @@ html {
 }
 
 body {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /* ======= */
@@ -45,7 +49,7 @@ body {
   padding: 0 20px;
 }
 
-.navbar .container-fluid ul{
+.navbar .container-fluid ul {
   padding: 0;
   margin: 0;
 }
@@ -71,7 +75,7 @@ body {
 }
 
 .nav-active {
-  background: linear-gradient(45deg, #14aa97, #4012ac);
+  background: var(--gradiente);
   transition: 0.5s ease;
 }
 
@@ -81,7 +85,7 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
-.navbar .container-fluid button{
+.navbar .container-fluid button {
   padding: 0;
   margin-right: 15px;
 }
@@ -99,7 +103,7 @@ body {
   background: linear-gradient(
     45deg,
     rgba(29, 236, 197, 0.7),
-    rgba(91, 14, 214, 0.7) 100%
+    rgba(91, 14, 214, 0.7)
   );
 }
 
@@ -123,7 +127,7 @@ body {
 }
 
 #intro .btn:hover span {
-  background: linear-gradient(45deg, #14aa97, #4012ac);
+  background: var(--gradiente);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -142,7 +146,7 @@ body {
 /* ====== */
 
 footer > div.text-center.p-3 {
-  background: linear-gradient(45deg, #14aa97, #4012ac);
+  background: var(--gradiente);
 }
 
 /* ========== */
@@ -159,7 +163,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #14aa97, #4012ac);
+  background: var(--gradiente);
   transition-duration: 0.5s;
   border-radius: 5px;
 }
@@ -168,7 +172,7 @@ body::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(
     45deg,
     rgba(29, 236, 197, 0.95),
-    rgba(91, 14, 214, 0.95) 100%
+    rgba(91, 14, 214, 0.95)
   );
 }
 
@@ -177,5 +181,42 @@ body::-webkit-scrollbar-thumb:hover {
 /* ========= */
 
 #copyright {
-  font-size: 15px;
+  font-size: 16px;
 }
+
+/* ======== */
+/* About Us */
+/* ======== */
+
+main {
+  padding-top: 3rem;
+}
+
+#about-us .row h1 {
+  margin-bottom: 20px;
+  background: var(--gradiente);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#about-us .row .bg-image {
+  overflow: visible;
+}
+
+#about-us .row img {
+  padding: 20px;
+  filter: drop-shadow(5px 5px 5px #666666);
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  transition: 0.2s ease-in-out;
+}
+
+#about-us .row img:hover {
+  transform: scale(1.05);
+}
+
+/* #about-us .row img:hover {
+  filter: drop-shadow(5px 5px 5px #666666);
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  transform: translateY(-10px);
+} */

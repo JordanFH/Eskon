@@ -51,6 +51,7 @@ $("#navbarExample01").on("hidden.bs.collapse", function () {
 });
 
 window.onresize = () => {
+  // Nav Bar
   $("#navbarExample01").collapse("hide");
   $(".fas").removeClass("fa-times");
   $(".fas").addClass("fa-bars");
@@ -61,8 +62,23 @@ window.onresize = () => {
     navbar.classList.add("nav-active");
   }
   intro.style.marginTop = "-" + navbar.offsetHeight + "px";
+
+  // About Us
+  if (window.innerWidth <= 1200) {
+    $(".gx-5").removeClass("col-md-6");
+  } else {
+    $(".gx-5").addClass("col-md-6");
+  }
 };
 
 window.onload = () => {
+  // Nav Bar
   intro.style.marginTop = "-" + navbar.offsetHeight + "px";
+
+  // About Us
+  if (window.innerWidth <= 1200) {
+    $(".gx-5").removeClass("col-md-6");
+  } else {
+    $(".gx-5").addClass("col-md-6");
+  }
 };
