@@ -298,7 +298,7 @@ body {
   display: inline-block;
   background-color: #33ccc5;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: bold;
   color: #fff;
   text-transform: capitalize;
   padding: 12px 25px;
@@ -342,6 +342,10 @@ header
 .background-header .nav li a.active {
   position: relative;
   color: #fff;
+}
+
+.nav li:nth-child(6) {
+  display: none;
 }
 
 .background-header .nav li a.active:after {
@@ -397,8 +401,6 @@ header
 
 .header-area .main-nav .logo h4 img {
   max-width: 30px;
-  margin-top: -20px;
-  margin-left: 5px;
 }
 
 .background-header .main-nav .logo h4 {
@@ -435,7 +437,7 @@ header
 .header-area .main-nav .nav li:last-child a,
 .background-header .main-nav .nav li:last-child a {
   padding: 0px 20px;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .header-area .main-nav .nav li:last-child a:hover,
@@ -445,7 +447,7 @@ header
 
 .header-area .main-nav .nav li a {
   display: block;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 15px;
   color: #fff;
   text-transform: capitalize;
@@ -680,12 +682,16 @@ header
   .header-area .main-nav:before {
     display: none;
   }
+
 }
 
 @media (max-width: 992px) {
   .header-area .main-nav .nav li:last-child,
   .background-header .main-nav .nav li:last-child {
     display: none;
+  }
+  .nav li:nth-child(6) {
+    display: block;
   }
   .header-area .main-nav .nav li:nth-child(6),
   .background-header .main-nav .nav li:nth-child(6) {
@@ -917,7 +923,8 @@ Banner Style
   background-size: cover;
   padding: 226px 0px 120px 0px;
   position: relative;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .main-banner:after {
@@ -934,7 +941,7 @@ Banner Style
 
 .main-banner:before {
   content: "";
-  background-image: url(../images/banner-dec-right.png);
+  background-image: url(../images/banner-dec-left.png);
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
@@ -942,6 +949,7 @@ Banner Style
   width: 1159px;
   height: 797px;
   z-index: -1;
+  transform: rotate(180deg);
 }
 
 .main-banner .left-content {
@@ -973,10 +981,11 @@ Banner Style
   font-weight: 800;
   color: #2a2a2a;
   line-height: 72px;
-  background: #fa9d4d;
-  background: -webkit-linear-gradient(to right, #fa9d4d 0%, #ff4f6b 100%);
-  background: -moz-linear-gradient(to right, #fa9d4d 0%, #ff4f6b 100%);
-  background: linear-gradient(to right, #fa9d4d 0%, #ff4f6b 100%);
+  background: #4771cb;
+  background: -webkit-linear-gradient(to right, #4771cb 0%, #33ccc5 100%);
+  background: -moz-linear-gradient(to right, #4771cb 0%, #33ccc5 100%);
+  background: linear-gradient(to right, #4771cb 0%, #33ccc5 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
