@@ -170,8 +170,6 @@ body {
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-  height: 100%;
 }
 
 a {
@@ -572,7 +570,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #fff;
+  background-color: #4771cb;
   display: block;
   position: absolute;
   width: 30px;
@@ -583,7 +581,7 @@ header
 .background-header .main-nav .menu-trigger span,
 .background-header .main-nav .menu-trigger span:before,
 .background-header .main-nav .menu-trigger span:after {
-  background-color: #fff;
+  background-color: #4771cb;
 }
 
 .header-area .main-nav .menu-trigger span:before,
@@ -592,7 +590,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #fff;
+  background-color: #4771cb;
   display: block;
   position: absolute;
   width: 30px;
@@ -603,7 +601,7 @@ header
 
 .background-header .main-nav .menu-trigger span:before,
 .background-header .main-nav .menu-trigger span:after {
-  background-color: #fff;
+  background-color: #4771cb;
 }
 
 .header-area .main-nav .menu-trigger span:before,
@@ -644,11 +642,11 @@ header
   -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
   -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
   transform: translateY(6px) translateX(1px) rotate(45deg);
-  background-color: #fff;
+  background-color: #4771cb;
 }
 
 .background-header .main-nav .menu-trigger.active span:before {
-  background-color: #fff;
+  background-color: #4771cb;
 }
 
 .header-area .main-nav .menu-trigger.active span:after {
@@ -656,11 +654,11 @@ header
   -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  background-color: #fff;
+  background-color: #4771cb;
 }
 
 .background-header .main-nav .menu-trigger.active span:after {
-  background-color: #fff;
+  background-color: #4771cb;
 }
 
 .header-area.header-sticky {
@@ -715,7 +713,7 @@ header
     width: 100%;
   }
   .header-area {
-    background-color: #33ccc5;
+    background-color: #f8f9fa;
     padding: 0px 15px;
     height: 100px;
     box-shadow: none;

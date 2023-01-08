@@ -14,10 +14,6 @@
     }
   });
 
-  $(window).on("load", function () {
-    
-  });
-
   $(".loop").owlCarousel({
     center: true,
     items: 2,
