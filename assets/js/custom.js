@@ -8,10 +8,14 @@
     var header = $("header").height();
 
     if (scroll >= box - header) {
-      $("header").addClass("background-header");
+      $("header").addClass("background-header bg-light");
     } else {
-      $("header").removeClass("background-header");
+      $("header").removeClass("background-header bg-light");
     }
+  });
+
+  $(window).on("load", function () {
+    
   });
 
   $(".loop").owlCarousel({
@@ -86,7 +90,7 @@
           500,
           "swing",
           function () {
-            window.location.hash = target;
+            window.location.hash = menu;
             $(document).on("scroll", onScroll);
           }
         );
@@ -99,7 +103,7 @@
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
       if (
-        refElement.position().top <= scrollPos &&
+        refElement.position().top <= scrollPos + 1 &&
         refElement.position().top + refElement.height() > scrollPos
       ) {
         $(".nav ul li a").removeClass("active");
