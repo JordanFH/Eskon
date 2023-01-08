@@ -210,11 +210,17 @@ global styles
 ::selection {
   background: #4771cb;
   color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
 }
 
 ::-moz-selection {
   background: #4771cb;
   color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
 }
 
 @media (max-width: 991px) {
@@ -328,6 +334,7 @@ global styles
   letter-spacing: 0.25px;
   border-bottom: 2px solid #4771cb !important;
   transition: all 0.3s;
+  margin-bottom: 45px;
 }
 
 .main-green-button a:hover {
@@ -948,12 +955,21 @@ Banner Style
   line-height: 70px;
   font-size: 50px;
   margin-bottom: 20px;
+  background: rgba(84, 236, 165, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(84, 236, 165, 1) 0%,
+    rgba(137, 255, 253, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main-banner .left-content p {
   margin-bottom: 45px;
-  color: #2a2a2a;
-  font-weight: 400;
+  font-weight: bold;
+  color: #fff;
 }
 
 .main-banner .left-content .first-button {
@@ -972,6 +988,25 @@ Banner Style
 
 .main-banner .right-image img {
   max-width: 710px;
+  overflow: hidden;
+  filter: drop-shadow(0 0 3px #29defd);
+  transform: translatey(0px);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    filter: drop-shadow(3px 0 3px #29defd);
+    transform: translatey(0px);
+  }
+  50% {
+    filter: drop-shadow(9px 0 3px #596cec);
+    transform: translatey(-15px);
+  }
+  100% {
+    filter: drop-shadow(3px 0 3px #29defd);
+    transform: translatey(0px);
+  }
 }
 
 .main-banner .left-content .white-button a {
@@ -1394,16 +1429,38 @@ Services Style
 
 .service-item {
   padding: 60px 30px;
-  border: 2px solid #f7f7f7;
-  border-radius: 5px;
+  border: 4px double #33ccc5;
+  border-radius: 50px;
   transition: all 0.3s;
   margin-bottom: 30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
 .service-item:hover {
-  background-color: #fff;
-  border: 2px solid transparent;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 4px solid #596cec;
+  border-radius: 50px 0 50px 0;
+  background-image: url(../images/service-bg.jpg);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.service-item:hover .icon {
+  background: rgb(51, 204, 197);
+  background: linear-gradient(
+    105deg,
+    rgba(51, 204, 197, 1) 0%,
+    rgba(8, 141, 195, 1) 100%
+  );
+}
+
+.service-item:hover .icon img {
+  filter: brightness(0) invert(1);
+}
+
+.service-item:hover h4,
+.service-item:hover p {
+  color: #fff;
 }
 
 .service-item .icon {
@@ -1523,15 +1580,15 @@ Portfolio
   text-align: center;
   line-height: 35px;
   font-size: 30px;
-  border: 2px solid #eee;
+  border: 2px solid #088ec3;
   border-radius: 50%;
-  color: #ddd;
   transition: all 0.5s;
+  color: #088ec3;
 }
 
 .our-portfolio .owl-nav span:hover {
-  color: #33ccc5;
-  border-color: #33ccc5;
+  color: #fff;
+  background-color: #088ec3;
 }
 
 /* 
@@ -1668,6 +1725,7 @@ Footer Style
 footer p {
   text-align: center;
   margin-top: 60px;
+  padding: 10px;
 }
 
 /* 
@@ -1705,17 +1763,6 @@ responsive
 @media (max-width: 992px) {
   .header-area .main-nav .logo h4 {
     font-size: 20px;
-  }
-  .main-banner:after {
-    display: none;
-  }
-  .main-banner .left-content h2 {
-    color: #2a2a2a;
-    margin-right: 0;
-  }
-  .main-banner .left-content p {
-    color: #afafaf;
-    margin-right: 0;
   }
   .main-banner .left-content .white-button a {
     background-color: #4b8ef1;
@@ -1776,6 +1823,9 @@ responsive
     max-width: 30px;
     margin-left: 5px;
   }
+  .our-services .container-fluid {
+    padding: 0 40px;
+  }
   .service-item {
     text-align: center;
     padding: 30px;
@@ -1804,5 +1854,11 @@ responsive
   }
   form#contact {
     padding: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .our-services .container-fluid {
+    padding: 0 10px;
   }
 }
