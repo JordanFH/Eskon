@@ -54,7 +54,7 @@
           {
             scrollTop: target.offset().top + 1,
           },
-          700
+          500
         );
         return false;
       }
@@ -86,14 +86,16 @@
           500,
           "swing",
           function () {
-            window.location.hash = menu;
+            // window.location.hash = target;
+            window.location.href = menu;
             $(document).on("scroll", onScroll);
           }
         );
     });
   });
 
-  function onScroll(event) {
+  function onScroll(e) {
+    e.preventDefault();
     var scrollPos = $(document).scrollTop();
     $(".nav a").each(function () {
       var currLink = $(this);
