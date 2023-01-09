@@ -170,6 +170,7 @@ body {
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 a {
@@ -487,14 +488,14 @@ header
   font-family: FontAwesome;
   content: "\f107";
   font-size: 12px;
-  color: #2a2a2a;
+  color: #4771cb;
   position: absolute;
   right: 18px;
   top: 12px;
 }
 
 .background-header .main-nav .nav li.submenu:after {
-  color: #2a2a2a;
+  color: #4771cb;
 }
 
 .header-area .main-nav .nav li.submenu ul {
@@ -521,7 +522,7 @@ header
   opacity: 1;
   display: block;
   background: #f7f7f7;
-  color: #2a2a2a !important;
+  color: #4771cb !important;
   padding-left: 20px;
   height: 40px;
   line-height: 40px;
@@ -770,7 +771,7 @@ header
     padding: 0px !important;
     border: none !important;
     background: #f7f7f7 !important;
-    color: #191a20 !important;
+    color: #4771cb !important;
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
@@ -954,7 +955,7 @@ Banner Style
   font-weight: 700;
   line-height: 70px;
   font-size: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background: rgba(84, 236, 165, 1);
   background: linear-gradient(
     90deg,
@@ -1020,7 +1021,7 @@ Features Style
 --------------------------------------------- 
 */
 
-#features {
+#trabajo {
   padding-top: 130px;
 }
 
@@ -1377,7 +1378,7 @@ About Us Style
 --------------------------------------------- 
 */
 
-#about {
+#nosotros {
   padding-top: 130px;
 }
 
@@ -1415,16 +1416,13 @@ Services Style
 
 .our-services {
   padding-top: 120px;
+  overflow-y: hidden;
 }
 
 .our-services .section-heading {
   text-align: center;
   margin-left: 75px;
   margin-right: 75px;
-}
-
-.our-services .container-fluid {
-  padding: 0px 80px;
 }
 
 .service-item {
@@ -1605,6 +1603,7 @@ contact
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+  overflow-y: hidden;
 }
 .contact-us .section-heading {
   text-align: center;
@@ -1823,9 +1822,6 @@ responsive
     max-width: 30px;
     margin-left: 5px;
   }
-  .our-services .container-fluid {
-    padding: 0 40px;
-  }
   .service-item {
     text-align: center;
     padding: 30px;
@@ -1854,11 +1850,5 @@ responsive
   }
   form#contact {
     padding: 30px;
-  }
-}
-
-@media (max-width: 500px) {
-  .our-services .container-fluid {
-    padding: 0 10px;
   }
 }
