@@ -83,7 +83,7 @@
           {
             scrollTop: target.offset().top + 1,
           },
-          500,
+          0,
           "swing",
           function () {
             // window.location.hash = target;
