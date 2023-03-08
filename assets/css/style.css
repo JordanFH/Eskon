@@ -162,7 +162,7 @@ hgroup {
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -326,9 +326,13 @@ global styles
   );
   color: #fff !important;
 }
+.main-green-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .main-green-button a {
-  display: inline-block;
   background-color: #33ccc5;
   font-size: 15px;
   font-weight: bold;
@@ -465,7 +469,7 @@ header
 .header-area .main-nav .nav li a {
   display: block;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
   color: #4771cb;
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
@@ -931,34 +935,23 @@ Banner Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 200px 120px 150px 120px;
   position: relative;
   overflow: hidden;
-}
-
-.main-banner:after {
-  content: "";
-  background-image: url(../images/slider-left-dec.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.main-banner .left-content {
-  margin-right: 15px;
+  background-image: url(../images/23.png);
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-banner .left-content h2 {
   z-index: 2;
   position: relative;
+  text-align: center;
   font-weight: 700;
   line-height: 70px;
-  font-size: 50px;
+  font-size: 60px;
   margin-bottom: 30px;
   background: rgba(84, 236, 165, 1);
   background: linear-gradient(
@@ -974,6 +967,7 @@ Banner Style
 .main-banner .left-content p {
   margin-bottom: 45px;
   font-weight: bold;
+  text-align: center;
   color: #fff;
 }
 
@@ -1776,7 +1770,7 @@ responsive
   }
   .main-banner {
     text-align: center;
-    padding: 226px 0px 30px 0px;
+    padding: 150px 0px 30px 0px;
   }
   .main-banner:before {
     display: none;
