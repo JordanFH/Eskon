@@ -280,6 +280,12 @@ global styles
   color: #088ec3;
 }
 
+.main-blue-green-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-blue-green-button a {
   display: inline-block;
   background-color: #4771cb;
@@ -953,10 +959,10 @@ Banner Style
   line-height: 70px;
   font-size: 60px;
   margin-bottom: 30px;
-  background: rgba(84, 236, 165, 1);
+  background: rgb(77, 201, 143);
   background: linear-gradient(
     90deg,
-    rgba(84, 236, 165, 1) 0%,
+    rgb(77, 201, 143) 0%,
     rgba(137, 255, 253, 1) 100%
   );
   background-clip: text;
@@ -966,9 +972,18 @@ Banner Style
 
 .main-banner .left-content p {
   margin-bottom: 45px;
-  font-weight: bold;
+  font-weight: 900;
+  font-size: 16px;
   text-align: center;
-  color: #fff;
+  background: #5080e7;
+  background: linear-gradient(
+    90deg,
+    #5080e7 0%,
+    rgb(53, 242, 255) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main-banner .left-content .first-button {
